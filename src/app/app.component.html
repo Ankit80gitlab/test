@@ -1,0 +1,24 @@
+<div *ngIf="pageType">
+    <div>
+        <int-header></int-header>
+    </div>
+    <div>
+        <router-outlet></router-outlet>
+    </div>
+    <div>
+        <int-footer></int-footer>
+    </div>
+</div>
+
+<div *ngIf="!pageType">
+    <div>
+        <ext-header></ext-header>
+    </div>
+    <div>
+        <router-outlet></router-outlet>
+    </div>
+    <div>
+        <ext-footer></ext-footer>
+    </div>
+</div>
+<app-chatbot></app-chatbot>
