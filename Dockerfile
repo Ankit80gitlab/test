@@ -1,6 +1,8 @@
-FROM node:12.2.0-alpine
-WORKDIR app
+FROM node:14.15.4 as node
+WORKDIR /app
 COPY . .
 RUN npm install
-EXPOSE 8000
+RUN npm run build --prod
+EXPOSE 4200
 CMD ["ng","serve"]
+
